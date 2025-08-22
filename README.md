@@ -12,9 +12,9 @@ cd wgc-markdown-editor
 npm install
 npm run dev
 ````
-Open your browser
-Go to http://localhost:4321
-Click "Admin" and "+ New Post".
+- Open your browser
+- Go to http://localhost:4321
+- Click "Admin" and "+ New Post".
 
 ### Usage
 
