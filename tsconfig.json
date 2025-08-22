@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "CommonJS",
+    "outDir": "dist/core",
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "paths": {
+      "@core/*": ["core/*"]
+    },
+    "lib": ["DOM", "ES2020"]
+  },
+  "include": [
+    "src",
+    "src/core/admin.ts"       
+  ]
+}
+

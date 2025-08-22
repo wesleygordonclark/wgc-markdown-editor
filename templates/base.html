@@ -1,0 +1,33 @@
+<!-- templates/base.html -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{{ title }} — {{ site.title }}</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- 🧭 Site Header -->
+  <header class="container">
+    <a href="/" class="brand">{{ site.title }}</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/markdown/">Markdown</a>
+      <a href="/admin/">Admin</a>
+    </nav>
+  </header>
+
+  <!-- 🔧 Injected Page Content -->
+  <main class="container">
+    {{{ content }}}
+  </main>
+
+  <!-- 🪶 Footer -->
+  <footer class="container">
+    <small>Powered by Wesley Gordon Clark</small>
+  </footer>
+</body>
+</html>

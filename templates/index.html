@@ -1,0 +1,11 @@
+<!-- templates/index.html -->
+
+<h1>Markdown Files</h1>
+<ul class="list">
+  {{#items}}
+    <li>
+      <a href="{{ url }}">{{ title }}</a>
+      {{#date}}<small>{{ date }}</small>{{/date}}
+    </li>
+  {{/items}}
+</ul>

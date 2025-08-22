@@ -1,0 +1,9 @@
+<!-- templates/post.html -->
+
+<article class="card">
+  <h1>{{ title }}</h1>
+  {{#date}}<p><small>{{ date }}</small></p>{{/date}}
+  <div class="prose">
+    {{{ body_html }}}
+  </div>
+</article>

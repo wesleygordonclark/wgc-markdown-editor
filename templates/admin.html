@@ -1,0 +1,93 @@
+<!-- templates/admin.html -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Nova Admin</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <!-- 🧭 Top Navigation Bar -->
+  <header class="bar">
+    <strong>Admin</strong>
+    <button id="themeToggle" class="btn">🌓 Theme</button>
+    <button id="newPost" class="btn">＋ New Post</button>
+    <div class="spacer"></div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/markdown/">Markdown</a>
+      <a href="/admin/">Admin</a>
+    </nav>
+  </header>
+
+  <!-- 📝 Admin Interface Layout -->
+  <div class="grid">
+    <!-- 📋 Sidebar: Post List + Search -->
+    <aside class="panel">
+      <input id="search" class="input" placeholder="Search posts..."/>
+      <ul id="postList" class="list"></ul>
+    </aside>
+
+    <!-- ✏️ Main Panel: Editor -->
+    <main class="panel">
+      <div id="editor">
+        <!-- Frontmatter Fields -->
+        <div class="row">
+          <label>Title <input id="fm-title" class="input"/></label>
+          <label>Date <input id="fm-date" class="input" type="date"/></label>
+          <label>Description <input id="fm-description" class="input"/></label>
+        </div>
+
+
+<!-- Markdown Toolbar -->
+<div class="toolbar">
+  <button data-wrap="**" title="Bold">B</button>
+  <button data-wrap="*" title="Italic"><i>i</i></button>
+  <button data-wrap="~~" title="Strikethrough">S</button>
+  <button data-md="`code`" title="Inline Code">⌘</button>
+  <button data-md="\n```js\ncode\n```\n" title="Code Block">📦</button>
+
+  <!-- Headings H1–H6 -->
+  <button data-md="# " title="Heading 1">H1</button>
+  <button data-md="## " title="Heading 2">H2</button>
+  <button data-md="### " title="Heading 3">H3</button>
+  <button data-md="#### " title="Heading 4">H4</button>
+  <button data-md="##### " title="Heading 5">H5</button>
+  <button data-md="###### " title="Heading 6">H6</button>
+
+  <button data-md="- " title="Bullet List">•</button>
+  <button data-md="1. " title="Numbered List">1.</button>
+  <button data-md="- [ ] " title="Task List">☐</button>
+  <button data-md="> " title="Blockquote">❝</button>
+  <button data-md="---\n" title="Divider">―</button>
+  <button data-md="| Header | Header |\n| ------ | ------ |\n| Cell | Cell |\n" title="Table">▦</button>
+  <button data-wrap="[" data-wrap-end="](https://)" title="Link">🔗</button>
+  <button data-wrap="![" data-wrap-end="](https://)" title="Image">🖼</button>
+</div>
+
+
+
+        <!-- Markdown Editor + Preview -->
+        <div class="split">
+          <textarea id="body" class="textarea" placeholder="Write Markdown..."></textarea>
+          <div id="preview" class="preview"></div>
+        </div>
+
+        <!-- Save/Delete Buttons -->
+        <div class="row">
+          <button id="save" class="btn primary">💾 Save</button>
+          <button id="delete" class="btn danger">🗑 Delete</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 🧠 Markdown Parser + Admin Logic -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="/js/admin.js"></script>
+</body>
+</html>
+
